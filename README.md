@@ -28,7 +28,7 @@ The code is very simple and it basically reads data from a CSV file and writes i
 
 There are at least 2 techniques used here to demonstrate data storing:
 1. parquet files: this file format provides columnar partitioning which results in efficient storage sizes and better performance on data querying by permiting parallel retrieving from the selected data.
-2. bucketed data: this method can also improve data querying by organizing data in multiple files by hashed columns tables their most used columns for querying, which permits parallel processing of the data. This method is appropriate in cases where the main columns has a huge amount of unique values in contrast with simple columnar partitioning which can be used where there are a small number of unique values to query.
+2. bucketed data: this method can also improve data querying by organizing data in multiple files by hashed columns, which permits parallel processing of the data. This method is appropriate in cases where the main columns has a huge amount of unique values in contrast with simple columnar partitioning which can be used where there are a small number of unique values to query.
 
 When storing the data, it is previously sellected the main columns which the buckets should be generated from, based on the users analysing requests:
 "Incident Number", "Incident Date", "Supervisor District", "Battalion"
